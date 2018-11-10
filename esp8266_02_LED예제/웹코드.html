@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+ <body>
+ </br></br>
+ <center>
+ <br><font size=4 face="¸¼Àº °íµñ" color="GRAY"> ESP8266 Project 1</br>
+ <font size=6 face="¸¼Àº°íµñ" color="LIGHTBLUE">ESP8266로 LED 점등하기
+ </font></center></br></br>
+ <center><button id="13" class="led" style="height:100; width:130;"><font size=4>LED PIN 13</font></button></center>
+ 
+ <script src="jquery.min.js"></script>
+ <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function(){
+   $(".led").click(function(){
+    var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+    // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+    $.get("http://61.105.207.100:20000/", {pin:p}); // execute get request
+   });
+  });
+ </script>
+ </body>
+</html>

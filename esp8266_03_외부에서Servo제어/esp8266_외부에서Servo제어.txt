@@ -1,0 +1,11 @@
+웹 기준
+1. 아두이노의 ip로 포트포워딩(포트는 임의로 지정)
+2. 아두이노의 코드에서 지정한 포트로 코드 수정
+	sendData("AT+CIPSERVER=1,20000\r\n", 1000, DEBUG); //포트 번호를 20,000번으로 설정
+3. 웹코드에서 public ip:포트번호 로 코드 수정
+	$.get("http://public_ip:port_number/", {pin:p});
+
+모바일-
+웹코드에 
+<script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+추가
